@@ -1,0 +1,221 @@
+/* Dr. Arshed Ali — site theme.
+   Adapts the "Posts Design" tokens for a calm, trustworthy medical aesthetic.
+   Keeps the cream + navy DNA, swaps mustard for a warm clinical orange,
+   softens chunky shadows, adds a sage accent for medical pairing.
+*/
+
+:root {
+  /* Re-tuned palette */
+  --bg: #F6EFE2;
+  --bg-soft: #FBF6EB;
+  --paper: #FFFFFF;
+  --ink-900: #0F2138;       /* slightly bluer navy than base */
+  --ink-700: #2A3A52;
+  --ink-500: #5C6B82;
+  --ink-300: #9AA4B4;
+
+  /* Warm clinical accents */
+  --accent: #E07A3C;        /* warm terracotta — replaces mustard for a medical-warm feel */
+  --accent-deep: #C25C20;
+  --accent-ink: #FFF6EC;
+  --sage: #5E8A6B;          /* secondary medical accent */
+  --sage-soft: #D9E5DB;
+  --crimson: #C53A4A;       /* used sparingly for emphasis (rhinoplasty marker) */
+  --gold: #D9A436;          /* small flourishes */
+  --cream: #FFF5DA;
+
+  /* Subtler shadows than the infographic system */
+  --shadow-1: 0 2px 0 rgba(15, 33, 56, 0.85);
+  --shadow-2: 0 3px 0 rgba(15, 33, 56, 0.85);
+  --shadow-3: 0 4px 0 rgba(15, 33, 56, 0.85);
+  --shadow-soft: 0 12px 30px rgba(15, 33, 56, 0.10);
+  --shadow-card: 0 4px 0 rgba(15, 33, 56, 0.85), 0 18px 30px rgba(15, 33, 56, 0.08);
+
+  --stroke: #0F2138;
+
+  /* Type re-scaled for web reading rather than 1080×1080 posters */
+  --fs-display:  88px;
+  --fs-h1:       48px;
+  --fs-h2:       34px;
+  --fs-h3:       22px;
+  --fs-body:     17px;
+  --fs-small:    14px;
+
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-xl: 32px;
+  --r-pill: 999px;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: var(--ff-body);
+  font-weight: 500;
+  font-size: var(--fs-body);
+  color: var(--ink-900);
+  background: var(--bg);
+  background-image:
+    radial-gradient(rgba(194, 92, 32, 0.07) 1.2px, transparent 1.2px);
+  background-size: 26px 26px;
+  background-position: 0 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+}
+
+img { max-width: 100%; display: block; }
+
+/* Type helpers */
+.display { font-family: var(--ff-display); letter-spacing: 0.5px; line-height: 1.02; }
+.serif   { font-family: 'Fraunces', Georgia, serif; }
+.hand    { font-family: 'Caveat', cursive; }
+
+/* Section scaffold */
+.section {
+  position: relative;
+  padding: 96px 64px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media (max-width: 720px) {
+  .section { padding: 64px 22px; }
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--ff-body);
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 22px; height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.h-display {
+  font-family: var(--ff-display);
+  font-size: var(--fs-display);
+  line-height: 0.98;
+  letter-spacing: 0.5px;
+  color: var(--ink-900);
+  margin: 0;
+}
+.h-section {
+  font-family: var(--ff-display);
+  font-size: var(--fs-h1);
+  line-height: 1.05;
+  margin: 12px 0 18px;
+  color: var(--ink-900);
+}
+.lede {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.45;
+  color: var(--ink-700);
+  max-width: 640px;
+  font-style: italic;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  font-family: var(--ff-body);
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  border: 2.5px solid var(--ink-900);
+  border-radius: var(--r-pill);
+  background: var(--paper);
+  color: var(--ink-900);
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-2);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-3); }
+.btn:active { transform: translateY(1px); box-shadow: 0 1px 0 rgba(15,33,56,0.85); }
+.btn--primary { background: var(--ink-900); color: var(--cream); }
+.btn--accent  { background: var(--accent); color: var(--accent-ink); }
+.btn--ghost   { background: transparent; box-shadow: none; }
+.btn--ghost:hover { background: rgba(15,33,56,0.05); box-shadow: none; }
+
+/* Cards (general) */
+.card {
+  background: var(--paper);
+  border: 2.5px solid var(--ink-900);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  font-family: var(--ff-body);
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border: 2px solid var(--ink-900);
+  border-radius: var(--r-pill);
+  background: var(--cream);
+  color: var(--ink-900);
+}
+
+.divider-wave {
+  display: block;
+  width: 100%;
+  height: 36px;
+}
+
+/* Animation utility classes used by IntersectionObserver */
+.reveal {
+  opacity: 1;
+  transform: none;
+  transition: opacity 700ms ease, transform 700ms cubic-bezier(.2,.8,.2,1);
+}
+.reveal.js-ready { opacity: 0; transform: translateY(18px); }
+.reveal.js-ready.is-in { opacity: 1; transform: none; }
+
+@keyframes float-y { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes draw-stroke {
+  to { stroke-dashoffset: 0; }
+}
+
+/* Urdu/Kashmiri accent text */
+.urdu {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  direction: rtl;
+  font-size: 0.95em;
+  color: var(--ink-700);
+  font-weight: 500;
+}
+
+/* Layout helpers */
+.row { display: flex; gap: 24px; flex-wrap: wrap; }
+.grid { display: grid; gap: 24px; }

@@ -1,82 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Arshed Ali Naqshbandi | ENT, Head & Neck Surgeon</title>
-  <meta name="description" content="Dr. Arshed Ali Naqshbandi – MBBS, MS ENT. ENT, Head & Neck Surgeon and Rhinoplasty Surgeon. Book an appointment at First Aid Pharmacy and Immunization Centre, Srinagar.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dr. Arshed Ali Naqshbandi · ENT, Head &amp; Neck Surgeon · Srinagar</title>
+  <meta name="description" content="ENT, Head & Neck and Rhinoplasty care in Srinagar by Dr. Arshed Ali Naqshbandi — MBBS, MS ENT (GMC Srinagar), Ex-Senior Resident SKIMS."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;500;600;700;800;900&family=Caveat:wght@400;700&family=Fraunces:ital,wght@0,400;0,500;1,400&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/tokens.css"/>
+  <link rel="stylesheet" href="styles/site.css"/>
 </head>
 <body>
-  <header class="header">
-    <a href="#" class="header__title">Dr. Arshed Ali</a>
-  </header>
+  <div id="root"></div>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero__content">
-        <h1 class="hero__name">Dr. Arshed Ali Naqshbandi</h1>
-        <p class="hero__credentials">MBBS, MS ENT H&NS GMC Srinagar · Ex Senior Resident SKIMS</p>
-        <p class="hero__subtitle">ENT, Head & Neck Surgeon · Rhinoplasty Surgeon</p>
-      </div>
-      <div class="hero__image-wrap">
-        <img src="assets/dr-arshed-ali.png" alt="Dr. Arshed Ali Naqshbandi, ENT and Head & Neck Surgeon" class="hero__image" width="600" height="400">
-      </div>
-    </section>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
-    <section class="about" id="about">
-      <h2 class="section-title">About</h2>
-      <p class="about__text">
-        Dr. Arshed Ali Naqshbandi is an ENT, Head & Neck Surgeon with training from GMC Srinagar and experience as Senior Resident at SKIMS. He specialises in ear, nose and throat care, head and neck surgery, and rhinoplasty, offering expert care in a calm and professional setting.
-      </p>
-    </section>
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="components/icons.jsx"></script>
+  <script type="text/babel" src="components/nav.jsx"></script>
+  <script type="text/babel" src="components/hero.jsx"></script>
+  <script type="text/babel" src="components/stats.jsx"></script>
+  <script type="text/babel" src="components/about.jsx"></script>
+  <script type="text/babel" src="components/services.jsx"></script>
+  <script type="text/babel" src="components/conditions.jsx"></script>
+  <script type="text/babel" src="components/rhinoplasty.jsx"></script>
+  <script type="text/babel" src="components/journey.jsx"></script>
+  <script type="text/babel" src="components/footer.jsx"></script>
+  <script type="text/babel" src="app.jsx"></script>
 
-    <section class="clinic" id="clinic">
-      <h2 class="section-title">Clinic</h2>
-      <address class="clinic__address">
-        <strong>First Aid Pharmacy and Immunization Centre</strong><br>
-        Opposite Dr. Sir Mohammad Iqbal Convention Center
-      </address>
-      <a href="https://maps.google.com/?q=34.030018,74.798584" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">Get directions</a>
-    </section>
-
-    <section class="booking" id="booking">
-      <h2 class="section-title">Book an appointment</h2>
-      <p class="booking__intro">Reach out via WhatsApp or call, or send a message below.</p>
-      <div class="booking__actions">
-        <!-- Replace href with your clinic WhatsApp number (e.g. https://wa.me/919876543210) -->
-        <a href="https://wa.me/919876543210?text=Hi%2C%20I%27d%20like%20to%20book%20an%20appointment%20with%20Dr.%20Arshed%20Ali." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--whatsapp">WhatsApp</a>
-        <!-- Replace href with your clinic phone number (e.g. tel:+919876543210) -->
-        <a href="tel:+919876543210" class="btn btn--primary btn--call">Call</a>
-      </div>
-      <div class="booking__form-wrap">
-        <h3 class="booking__form-title">Or send a message</h3>
-        <!-- Replace action with your Formspree form URL (e.g. https://formspree.io/f/xxxxx) -->
-        <form class="booking-form" id="booking-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <input type="hidden" name="_subject" value="Appointment request – Dr. Arshed Ali">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required autocomplete="name">
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" required autocomplete="tel">
-          <label for="preferred">Preferred date / time</label>
-          <input type="text" id="preferred" name="preferred_date_time" placeholder="e.g. Tomorrow afternoon">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" placeholder="Brief reason for visit (optional)"></textarea>
-          <button type="submit" class="btn btn--primary">Send message</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p class="footer__clinic">First Aid Pharmacy and Immunization Centre</p>
-    <a href="https://maps.google.com/?q=34.030018,74.798584" target="_blank" rel="noopener noreferrer" class="footer__link">Get directions</a>
-    <p class="footer__copy">© Dr. Arshed Ali Naqshbandi</p>
-  </footer>
-
-  <script src="js/main.js"></script>
+  <script>
+    // Inject all component CSS into a stylesheet — components define their own styles
+    window.addEventListener('DOMContentLoaded', () => {
+      // Wait briefly for Babel scripts to register style strings
+      const inject = () => {
+        const all = [
+          window.navStyles, window.heroStyles, window.statsStyles, window.aboutStyles,
+          window.servicesStyles, window.conditionsStyles, window.rhinoStyles,
+          window.journeyStyles, window.faqStyles
+        ].filter(Boolean).join('\n');
+        if (all) {
+          const style = document.createElement('style');
+          style.id = 'component-styles';
+          style.textContent = all;
+          document.head.appendChild(style);
+        } else {
+          setTimeout(inject, 80);
+        }
+      };
+      setTimeout(inject, 200);
+    });
+  </script>
 </body>
 </html>

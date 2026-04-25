@@ -1,0 +1,110 @@
+/* Posts Design — Colors & Type
+   Referenced from sample infographic: chunky rounded banners, cream bg,
+   alternating black / mustard card headers, dotted texture.
+*/
+
+/* Fonts — using Google Fonts approximations of the reference:
+   - Display:  "Fraunces" is too serif; reference uses a chunky rounded display
+     with rough edges ("Lilita One" or "Paytone One" + outline). I'm using
+     "Lilita One" for the hero banner headline.
+   - Body/UI:  "Nunito" — friendly rounded sans matches the reference card text.
+   - Accent:   "Caveat" for handwritten labels if needed.
+   FLAG: these are Google Font substitutes. If you want to match a specific
+   LinkedIn creator's exact fonts, upload them and I'll swap in.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900&family=Caveat:wght@400;700&display=swap');
+
+:root {
+  /* ============ COLORS ============ */
+  /* Backgrounds */
+  --bg: #F5EFE2;          /* warm cream, slightly darker than the reference to stand out on feed */
+  --bg-dot: #C9BFA9;      /* dotted texture */
+  --paper: #FFFFFF;       /* card body paper */
+
+  /* Ink / foregrounds */
+  --ink-900: #0F1D2E;     /* deep navy, used for banner + headers + body */
+  --ink-700: #243347;
+  --ink-500: #4A5A70;
+  --ink-300: #8A95A5;
+
+  /* Accents (matched to reference) */
+  --mustard: #F4C542;     /* mustard yellow header */
+  --mustard-ink: #2A1E00; /* text on mustard */
+  --cream: #FFF5DA;       /* soft cream highlight */
+
+  /* Category accents (for icon badges, connector nodes) */
+  --c-blue:   #3B82F6;
+  --c-teal:   #14B8A6;
+  --c-green:  #22C55E;
+  --c-amber:  #F59E0B;
+  --c-rose:   #F43F5E;
+  --c-violet: #8B5CF6;
+  --c-orange: #FB7A3C;
+
+  /* Lines */
+  --stroke: #0F1D2E;       /* dark connector line */
+  --stroke-soft: #C9BFA9;
+
+  /* Shadows — chunky cartoon drop shadow like the reference */
+  --shadow-1: 0 3px 0 rgba(15,29,46,0.95);
+  --shadow-2: 0 5px 0 rgba(15,29,46,0.95);
+  --shadow-3: 0 7px 0 rgba(15,29,46,0.95);
+  --shadow-soft: 0 6px 14px rgba(15,29,46,0.12);
+
+  /* Radii */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+
+  /* ============ TYPE ============ */
+  --ff-display: 'Lilita One', 'Paytone One', system-ui, sans-serif;
+  --ff-body:    'Nunito', system-ui, -apple-system, sans-serif;
+  --ff-hand:    'Caveat', cursive;
+  --ff-mono:    ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Type scale — designed for 1080×1350 canvas */
+  --fs-hero:    72px;  /* banner headline */
+  --fs-hero-sm: 56px;
+  --fs-h1:      40px;
+  --fs-h2:      30px;
+  --fs-title:   26px;  /* card header */
+  --fs-body:    20px;  /* card body */
+  --fs-small:   16px;
+  --fs-tiny:    14px;
+
+  /* Spacing */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+}
+
+/* Semantic base styles */
+.display {
+  font-family: var(--ff-display);
+  letter-spacing: 0.5px;
+  line-height: 1.05;
+}
+.body {
+  font-family: var(--ff-body);
+  font-weight: 600;
+  line-height: 1.35;
+}
+h1, .h1 { font-family: var(--ff-display); font-size: var(--fs-h1); line-height: 1.1; color: var(--ink-900); }
+h2, .h2 { font-family: var(--ff-display); font-size: var(--fs-h2); line-height: 1.15; color: var(--ink-900); }
+p, .p  { font-family: var(--ff-body); font-size: var(--fs-body); color: var(--ink-900); font-weight: 600; }
+.small { font-size: var(--fs-small); }
+
+/* Dotted background */
+.bg-dotted {
+  background-color: var(--bg);
+  background-image: radial-gradient(var(--bg-dot) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+  background-position: 0 0;
+}
